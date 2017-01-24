@@ -1,14 +1,6 @@
-var app = require('./server').app;
-var port = 3000;
+var app = require('./server.js').app;
+var port = 3021;
 
-User.sync({ force: true })
-  .then(function () {
-    console.log('Users table created');
-    return User.create({ username: 'zlester' });
-  })
-  .then(function() {
-    console.log('Seeded User table');
     app.listen(port, function() {
-      console.log('node-express-sequelize listening on ' + port);
-    });
+      console.log('node-express-mongoose listening on ' + port);
   });

@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var EpicSchema - new mongoose.Schema({
+var EpicSchema = new mongoose.Schema({
   hero: {
     type: String,
     required: true
@@ -11,4 +11,5 @@ var EpicSchema - new mongoose.Schema({
   }
 })
 
-module.exports = mongoose.model('users', UserSchema);
+var Epic = mongoose.model('Epic', EpicSchema);
+module.exports = Epic;
